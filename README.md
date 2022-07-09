@@ -8,11 +8,6 @@ Les sources de l'application sont dans le répertoire __/Android/Entrevoisins__.
 
 Le projet est développé en __java__ avec __Android Studio__.
 
-## Mise en place
-- Téléchargez le code du projet, de préférence en utilisant git clone.  
-- Télécharger __Android Studio__ : <https://developer.android.com/studio>  
-- Dans Android Studio, sélectionnez Fichier | Ouvrez ... et pointez sur le répertoire ./Android/Entrevoisins  
-
 ## Compilation et exécution
 - Pour compiler le projet : Menu Build->Make project (Ctrl + F9)  
 - Pour exécuter l’application : Menu Run->Run… (Alt+Maj+F10) puis sélectionner "app"  
