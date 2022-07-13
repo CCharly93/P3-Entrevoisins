@@ -1,5 +1,7 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
+import android.content.Intent;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +19,7 @@ import com.openclassrooms.entrevoisins.model.Neighbour;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.io.Serializable;
 import java.util.List;
 
 import butterknife.BindView;
@@ -38,8 +41,8 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
     }
 
     private void openDetailsNeighbour(View view, Neighbour neighbour) {
-        Log.d("mydebug", "MyNeighbourRecyclerViewAdapter.openDetailNeighbour");
-        DetailsNeighbourActivity.navigate(view.getContext(),  neighbour);
+        Log.d("mydebug", "MyNeighbourRecyclerViewAdapter.openDetailsNeighbour");
+        //DetailsNeighbourActivity.navigate(view.getContext(),  neighbour);
     }
 
     @Override
@@ -54,7 +57,11 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDetailsNeighbour(view, neighbour);
+                // openDetailsNeighbour(view, neighbour);
+                System.out.println("Coucou" + neighbour.getName());
+                Intent intent = new Intent(view.getContext(), DetailsNeighbourActivity.class);
+                intent.putExtra(DetailsNeighbourActivity.NEIGHBOUR, (Serializable) neighbour);
+                ActivityCompat.startActivity(view.getContext(), intent, null);
             }
         });
         holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {

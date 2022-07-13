@@ -22,11 +22,10 @@ import com.openclassrooms.entrevoisins.di.DI;
 import com.openclassrooms.entrevoisins.model.Neighbour;
 import com.openclassrooms.entrevoisins.service.NeighbourApiService;
 
-public class DetailNeighbourActivity extends AppCompatActivity {
+public class DetailsNeighbourActivity extends AppCompatActivity {
 
-    public static final String EXTRA_ID = "com.openclassrooms.entrevoisins.EXTRA_TEXT";
-
-    private Neighbour neighbour;
+    //public static final String EXTRA_ID = "com.openclassrooms.entrevoisins.EXTRA_TEXT";
+    public static final String NEIGHBOUR = "NEIGHBOUR";
 
     @BindView(R.id.details_avatar)
     ImageView avatar;
@@ -51,11 +50,11 @@ public class DetailNeighbourActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
-        long id = intent.getLongExtra(DetailNeighbourActivity.EXTRA_ID, 0);
-        Log.d("mydebug", "DetailNeighbourActivity.onCreate() Id = " + id);
+        Neighbour neighbour = (Neighbour) intent.getSerializableExtra(DetailsNeighbourActivity.NEIGHBOUR);
+        Log.d("mydebug", "DetailsNeighbourActivity.onCreate() Neighbour = " + neighbour.getName());
 
-        this.neighbour = DI.getNeighbourApiService().findNeighbourById(id);
-        if (neighbour != null)
+        //DI.getNeighbourApiService().findNeighbourById(id);
+        //if (neighbour != null)
         {
             //this.avatar = neighbour.getAvatarUrl();
             this.titre.setText(neighbour.getName());
@@ -68,20 +67,18 @@ public class DetailNeighbourActivity extends AppCompatActivity {
             Glide.with(avatar.getContext())
                     .load(neighbour.getAvatarUrl())
                     .into(avatar);
-            Log.i("mydebug", "DetailNeighbourActivity.onCreate() isFavorite = " + neighbour());
+            Log.i("mydebug", "DetailNeighbourActivity.onCreate() isFavorite = " + neighbour);
 
         }
     }
 
-    }
-
-    public static void navigate(Context context, Neighbour neighbour) {
-        Long id = neighbour.getId();
-        Intent intent = new Intent(context, DetailNeighbourActivity.class);
-        intent.putExtra(DetailNeighbourActivity.EXTRA_ID, id);
-        ActivityCompat.startActivity(context, intent, null);
-    }
-
+    /*  public static void navigate(Context context, Neighbour neighbour) {
+          Long id = neighbour.getId();
+          Intent intent = new Intent(context, DetailsNeighbourActivity.class);
+          intent.putExtra(DetailsNeighbourActivity.EXTRA_ID, id);
+          ActivityCompat.startActivity(context, intent, null);
+      }
+  */
     @Override
     public void onResume(){
         super.onResume();
