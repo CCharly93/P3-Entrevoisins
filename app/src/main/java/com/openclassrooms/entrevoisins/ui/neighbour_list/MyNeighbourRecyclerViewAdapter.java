@@ -1,7 +1,5 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
-import android.content.Intent;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,11 +13,11 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.openclassrooms.entrevoisins.R;
 import com.openclassrooms.entrevoisins.events.DeleteNeighbourEvent;
+import com.openclassrooms.entrevoisins.events.SelectNeighbourEvent;
 import com.openclassrooms.entrevoisins.model.Neighbour;
 
 import org.greenrobot.eventbus.EventBus;
 
-import java.io.Serializable;
 import java.util.List;
 
 import butterknife.BindView;
@@ -57,11 +55,12 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // openDetailsNeighbour(view, neighbour);
+                EventBus.getDefault().post(new SelectNeighbourEvent(neighbour));
+                /* openDetailsNeighbour(view, neighbour);
                 System.out.println("Coucou" + neighbour.getName());
                 Intent intent = new Intent(view.getContext(), DetailsNeighbourActivity.class);
                 intent.putExtra(DetailsNeighbourActivity.NEIGHBOUR, (Serializable) neighbour);
-                ActivityCompat.startActivity(view.getContext(), intent, null);
+                ActivityCompat.startActivity(view.getContext(), intent, null);*/
             }
         });
         holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {

@@ -26,6 +26,19 @@ public class Neighbour implements Serializable {
     /** About me */
     private String aboutMe;
 
+    /** Favorites */
+    private Boolean favorite = false;
+
+    public Boolean getFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(Boolean favorite) {
+        this.favorite = favorite;
+    }
+
+    //public void toggleFavoriteStatus() { setFavorite(!isFavorite()); }
+
     /**
      * Constructor
      * @param id
@@ -40,6 +53,7 @@ public class Neighbour implements Serializable {
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.aboutMe = aboutMe;
+        //this.favorite = favorite;
     }
 
     public long getId() {
