@@ -65,10 +65,11 @@ public class DetailsNeighbourActivity extends AppCompatActivity {
             this.address.setText(neighbour.getAddress());
             this.phoneNumber.setText(neighbour.getPhoneNumber());
             this.aboutMe.setText(neighbour.getAboutMe());
-            this.web.setText("");
+            this.web.setText("https://facebook.com/"+neighbour.getName());
 
             Glide.with(avatar.getContext())
                     .load(neighbour.getAvatarUrl())
+                    .centerCrop()
                     .into(avatar);
             Log.i("mydebug", "DetailNeighbourActivity.onCreate() isFavorite = " + neighbour);
             mButtonPrevious.setOnClickListener(v -> finish());

@@ -1,179 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.neighbour_list.DetailsNeighbourActivity">
-
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
+    android:layout_width="408dp"
     android:layout_height="wrap_content"
     tools:context=".ui.neighbour_list.DetailsNeighbourActivity">
 
-  <ImageButton
-      android:id="@+id/previous_button"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="24dp"
-      app:layout_constraintEnd_toEndOf="@+id/details_avatar"
-      app:layout_constraintHorizontal_bias="0.076"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@android:drawable/ic_menu_revert" />
+  <android.support.constraint.ConstraintLayout
+      android:layout_width="406dp"
+      android:layout_height="529dp"
+      tools:context=".ui.neighbour_list.DetailsNeighbourActivity"
+      tools:layout_editor_absoluteX="1dp"
+      tools:layout_editor_absoluteY="1dp">
 
-  <android.support.design.widget.FloatingActionButton
-      android:id="@+id/fav_button"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="84dp"
-      android:clickable="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.909"
-      app:layout_constraintStart_toStartOf="@+id/details_avatar"
-      app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@drawable/ic_star_border_white_24dp" />
+    <ImageView
+        android:id="@+id/details_avatar"
+        android:layout_width="408dp"
+        android:layout_height="276dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-  <ImageView
-      android:id="@+id/details_avatar"
-      android:layout_width="408dp"
-      android:layout_height="match_parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      tools:srcCompat="@tools:sample/avatars" />
+    <TextView
+        android:id="@+id/details_titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="24dp"
+        android:text="Caroline"
+        android:textColor="#F1EDED"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/details_avatar"
+        app:layout_constraintStart_toStartOf="parent" />
 
-  <TextView
-      android:id="@+id/details_titre"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="32dp"
-      android:layout_marginBottom="8dp"
-      android:text="Caroline"
-      android:textColor="#F1EDED"
-      android:textSize="34sp"
-      app:layout_constraintBottom_toBottomOf="@+id/details_avatar"
-      app:layout_constraintStart_toStartOf="parent" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fav_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="332dp"
+        android:layout_marginBottom="-16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/details_avatar"
+        app:layout_constraintStart_toStartOf="@+id/details_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932"
+        app:srcCompat="@drawable/ic_star_border_white_24dp" />
 
-  <android.support.v7.widget.CardView
-      android:id="@+id/cardView"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="36dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/details_avatar">
+    <ImageButton
+        android:id="@+id/previous_button"
+        android:layout_width="59dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:rotation="-360"
+        android:rotationX="-360"
+        android:rotationY="180"
+        app:layout_constraintEnd_toEndOf="@+id/details_avatar"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_trending_flat_36" />
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="373dp"
+        android:layout_height="216dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_avatar">
 
-      <TextView
-          android:id="@+id/details_name"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="16dp"
-          android:layout_marginTop="16dp"
-          android:text="Caroline"
-          android:textSize="24sp"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
-
-      <ImageView
-          android:id="@+id/imageView2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="16dp"
-          app:layout_constraintStart_toStartOf="@+id/details_name"
-          app:layout_constraintTop_toBottomOf="@+id/details_name"
-          app:srcCompat="@android:drawable/ic_menu_compass" />
-
-      <TextView
-          android:id="@+id/details_adresse"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="12dp"
-          android:layout_marginTop="12dp"
-          android:text="Adresse"
-          app:layout_constraintStart_toEndOf="@+id/imageView2"
-          app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-      <ImageView
-          android:id="@+id/imageView3"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="16dp"
-          app:layout_constraintStart_toStartOf="@+id/imageView2"
-          app:layout_constraintTop_toBottomOf="@+id/imageView2"
-          app:srcCompat="@android:drawable/ic_menu_call" />
-
-      <TextView
-          android:id="@+id/details_telephone"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="12dp"
-          android:text="Téléphone"
-          app:layout_constraintStart_toStartOf="@+id/details_adresse"
-          app:layout_constraintTop_toTopOf="@+id/imageView3" />
-
-      <ImageView
-          android:id="@+id/imageView4"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="16dp"
-          app:layout_constraintStart_toStartOf="@+id/imageView2"
-          app:layout_constraintTop_toBottomOf="@+id/imageView3"
-          app:srcCompat="@android:drawable/ic_menu_share" />
-
-      <TextView
-          android:id="@+id/details_web"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="12dp"
-          android:text="https://www.facebook.com/Caroline"
-          app:layout_constraintStart_toStartOf="@+id/details_adresse"
-          app:layout_constraintTop_toTopOf="@+id/imageView4" />
-    </android.support.constraint.ConstraintLayout>
-  </android.support.v7.widget.CardView>
-
-  <android.support.v7.widget.CardView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.492"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/cardView"
-      app:layout_constraintVertical_bias="0.101" >
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-      <TextView
-          android:id="@+id/textView6"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="16dp"
-          android:layout_marginTop="16dp"
-          android:text="À propos de moi"
-          android:textSize="24sp"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
-
-      <TextView
-          android:id="@+id/details_about"
+      <android.support.constraint.ConstraintLayout
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="16dp"
-          android:text="À propos de Caroline"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.529"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/textView6" />
-    </android.support.constraint.ConstraintLayout>
-  </android.support.v7.widget.CardView>
+          android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Caroline"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:srcCompat="@drawable/ic_baseline_local_phone_36" />
+
+        <TextView
+            android:id="@+id/details_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="https://www.facebook.com/Caroline"
+            app:layout_constraintStart_toStartOf="@+id/details_adresse"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/details_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Téléphone"
+            app:layout_constraintStart_toStartOf="@+id/details_adresse"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="36dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/details_name"
+            app:layout_constraintTop_toBottomOf="@+id/details_name"
+            app:srcCompat="@drawable/ic_baseline_location_on_36" />
+
+        <TextView
+            android:id="@+id/details_adresse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="Adresse"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:srcCompat="@drawable/ic_baseline_public_36" />
+
+      </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="375dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+      <android.support.constraint.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="À propos de moi"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/details_about"
+            android:layout_width="324dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="20dp"
+            android:text="À propos de Caroline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.313"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+      </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+  </android.support.constraint.ConstraintLayout>
 </ScrollView>
