@@ -37,6 +37,7 @@ public class NeighbourFragment extends Fragment {
      * Create and return a new instance
      * @return @{@link NeighbourFragment}
      */
+    //Important : on a modifié le newInstance pour lui passer un paramètre afin de savoir si on veut la liste de voisins favoris ou non
     public static NeighbourFragment newInstance(Boolean favorite_only) {
         NeighbourFragment fragment = new NeighbourFragment();
 
@@ -51,6 +52,7 @@ public class NeighbourFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mApiService = DI.getNeighbourApiService();
+        //Important : On récupère le booléen favorite_only en tant que variable d'instance
         favorite_only = getArguments().getBoolean("favorite_only");
         Log.d(LOG_NAME, "favorite_only = " + favorite_only);
     }
@@ -71,6 +73,7 @@ public class NeighbourFragment extends Fragment {
      * Init the List of neighbours
      */
     private void initList() {
+        //Important : Si c'est favoris je demande  mon service la liste des voisins favoris si non, la liste de tous les voisins
         mNeighbours = favorite_only ? mApiService.getFavoriteNeighbours() : mApiService.getNeighbours();
         mRecyclerView.setAdapter(new MyNeighbourRecyclerViewAdapter(mNeighbours));
     }

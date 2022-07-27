@@ -27,6 +27,7 @@ public class Neighbour implements Serializable {
     private String aboutMe;
 
     /** Favorites */
+    //Création du Booléen favoris et du status favoris
     private Boolean favorite = false;
 
     public Boolean getFavorite() {
