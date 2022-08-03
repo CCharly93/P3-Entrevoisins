@@ -5,6 +5,19 @@
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/kkhro/AndroidStudioProjects/Entrevoisins/app/src/main/res/layout/activity_details_neighbour.xml" value="0.33" />
+        <entry key="..\:/Users/kkhro/AndroidStudioProjects/Entrevoisins/app/src/main/res/layout/activity_list_neighbour.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/kkhro/AndroidStudioProjects/Entrevoisins/app/src/main/res/layout/fragment_favorite.xml" value="0.14279606669516887" />
+        <entry key="..\:/Users/kkhro/AndroidStudioProjects/Entrevoisins/app/src/main/res/layout/fragment_neighbour.xml" value="0.1675929884566054" />
+        <entry key="..\:/Users/kkhro/AndroidStudioProjects/Entrevoisins/app/src/main/res/layout/fragment_neighbour_favorite_list.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/kkhro/AndroidStudioProjects/Entrevoisins/app/src/main/res/layout/fragment_neighbour_list.xml" value="0.20308250226654578" />
+        <entry key="..\:/Users/kkhro/AndroidStudioProjects/Entrevoisins/app/src/main/res/layout/fragment_neighbourfavorite_list.xml" value="0.20308250226654578" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
