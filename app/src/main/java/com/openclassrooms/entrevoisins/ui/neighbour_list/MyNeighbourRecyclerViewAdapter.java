@@ -40,7 +40,6 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
 
     private void openDetailsNeighbour(View view, Neighbour neighbour) {
         Log.d("mydebug", "MyNeighbourRecyclerViewAdapter.openDetailsNeighbour");
-        //DetailsNeighbourActivity.navigate(view.getContext(),  neighbour);
     }
 
     @Override
@@ -56,11 +55,6 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
             @Override
             public void onClick(View view) {
                 EventBus.getDefault().post(new SelectNeighbourEvent(neighbour));
-                /* openDetailsNeighbour(view, neighbour);
-                System.out.println("Coucou" + neighbour.getName());
-                Intent intent = new Intent(view.getContext(), DetailsNeighbourActivity.class);
-                intent.putExtra(DetailsNeighbourActivity.NEIGHBOUR, (Serializable) neighbour);
-                ActivityCompat.startActivity(view.getContext(), intent, null);*/
             }
         });
         holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {
